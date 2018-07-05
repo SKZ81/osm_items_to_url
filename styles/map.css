@@ -1,0 +1,208 @@
+a {
+  cursor:pointer;
+}
+
+#toolBar {
+  float:left;
+  width:5%;
+}
+
+#showSearchBarButtun {
+  width:100%
+}
+
+#linktoListButtunBox {
+  width:100%
+}
+
+#searchTable {
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;  
+  display:none;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding:0px;
+}
+
+#searchInputCell {
+  width:100%;
+}
+
+#searchButtonCell {
+  max-width:34px;
+}
+
+#closeButtonCell {
+  max-width:34px;
+}
+
+
+
+#searchInput{
+  width:100%;
+}
+
+#searchButtonIcon{
+/*  width:48px;
+  height:48px;*/
+}
+
+
+#mapStyleMenu {
+  position:relative;
+  left:48px;
+  top:-44px;
+  z-index:10;
+  display:none;
+  text-align:center;
+  display:none;
+}
+
+#mapStyleMenuTable {
+  border:2px solid white;
+  border-collapse:collapse;
+}
+
+.mapstyle {
+  background-color:#2E7DEA;
+  color:#FFFFFF;
+  border:0px;
+  padding-left:2px;
+  padding-right:2px;
+  cursor:pointer;
+}
+
+td.mapstyle:hover {
+  background-color:#1AB4EC;
+}
+
+.mapstyle_alt {
+  background-color:#1D75D9;
+  color:#FFFFFF;
+  border:0px;
+  padding-left:2px;
+  padding-right:2px;
+  cursor:pointer;
+}
+
+td.mapstyle_alt:hover {
+  background-color:#1AB4EC;
+}
+
+a.mapStyleEntry {
+  width:100%;
+}
+
+
+#map {
+  width:90%;
+  height:650px;
+  border:solid black 2px;
+  margin-left:0px;
+  margin-right:auto;
+  z-index:1;
+}
+
+#locLat {
+  display:none;
+}
+
+#locLng {
+  display:none;
+}
+
+#action {
+  display:none;
+}
+
+#submitLocationDiv {
+  margin-top:8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#markerIconDiv {
+  vertical-align:top; 
+  text-align:right;
+  width:48px;  
+}
+
+#markerIcon {
+  margin-right:auto;
+  margin-left:auto; 
+  margin-top:10px;
+}
+
+#submitLocationInputsDiv {
+  /*width:70%;*/
+}
+
+#submitLocationButtonDiv {
+  /*width:15%;*/
+}
+
+#name {
+  font-family:"Monospace";
+  font-size:13px;
+}
+
+#url {
+  font-family:"Monospace";
+  font-size:13px;
+}
+
+#checkboxTable {
+  width:100%;
+}
+
+#comments {
+  font-family:"Monospace";
+  font-size:13px;
+}
+
+
+#mbededXplorer {
+  display:none;
+  width:90%;
+  height:800px;
+  margin-left:auto;
+  margin-right:auto;  
+}
+
+#mBdedXpURLText {
+  vertical-align:bottom;
+}
+
+#mBdedXpCloseCross {
+  float:left;
+  width:30px;
+  height:32px;
+}
+
+#mBdedXpCloseCrossImg {
+  width:30px;
+  height:32px;
+  border:0px;
+}
+
+#mBdedXpURL {
+  /*font:TODO*/
+}
+
+#mBdedXpPame {
+  width:100%;
+  height:100%;
+}
+
+
+
+.popupButtonsTable {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.popupButtonCell {
+  padding-left:2px;
+  padding-right:2px;
+}  

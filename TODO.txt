@@ -1,0 +1,5 @@
+[X] Unbind popups when modifying
+[X] cancel button for modifying
+
+[ ] rename HTML ids
+[ ] "franglais" should be localized (at less, uniformized french for end-user)

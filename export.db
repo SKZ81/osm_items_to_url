@@ -1,0 +1,419 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.5
+-- http://www.phpmyadmin.net
+--
+-- Host: johann.cahier.sql.free.fr
+-- Generation Time: Jun 25, 2018 at 05:46 PM
+-- Server version: 5.0.83
+-- PHP Version: 5.3.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `skuizh`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appart`
+--
+
+CREATE TABLE IF NOT EXISTS `appart` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `loclat` float NOT NULL,
+  `loclng` float NOT NULL,
+  `url` text NOT NULL,
+  `comment` text NOT NULL,
+  `interet` int(11) NOT NULL,
+  `checked` tinyint(4) NOT NULL,
+  `address` tinyint(4) NOT NULL,
+  `unvalid` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
+
+--
+-- Dumping data for table `appart`
+--
+
+INSERT INTO `appart` (`id`, `name`, `loclat`, `loclng`, `url`, `comment`, `interet`, `checked`, `address`, `unvalid`) VALUES
+(1, 'Maison T2  40m² ', 43.3158, 5.40626, 'http://www.leboncoin.fr/locations/750037392.htm', 'Demande de rendez-vous par mail 13/07/15 => 15/07<br>reponse négative<br>Colette VIEIRA DA SILVA<br>Email cvds@croisitour.com <br>jardin - 730€', 0, 1, 0, 1),
+(34, 'Meublé Studio 25m²', 43.3113, 5.40939, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13012/location-temporaire-/123778728', '450€', 0, 0, 0, 0),
+(33, 'Meublé T2 35m²', 43.3334, 5.42982, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble chateau-gombert-13013/meubl--t2--m2-m-tro-la-rose/123600935', '560€', 0, 0, 0, 0),
+(28, 'Maison T2 30m²', 43.3129, 5.48338, 'http://www.leboncoin.fr/locations/824361709.htm', 'terrasse 650€<br>', 0, 0, 0, 0),
+(6, 'Maison T1 30m2', 43.3466, 5.46046, 'http://www.leboncoin.fr/locations/820027373.htm', 'terrasse / jardinet ; 500€<br>mobilier à négocier', 1, 0, 0, 0),
+(8, 'Maison T2 28m² DOUBLON', 43.3546, 5.43866, 'http://www.leboncoin.fr/locations/757332818.htm', '620€ pas de jardin', 0, 0, 0, 1),
+(9, 'Maison T2 45m²', 43.3533, 5.46106, 'http://www.leboncoin.fr/locations/790918362.htm', 'pas de jardin 670€', 0, 0, 0, 0),
+(10, 'Maison T1 27m²', 43.3204, 5.4266, 'http://www.seloger.com/annonces/locations/maison/marseille-12eme-13/montolivet/82933347.htm?cp=13', 'terrain 14m²- 495€', 0, 0, 0, 0),
+(12, 'Maison T2 44m² doublon', 43.3262, 5.47085, 'http://www.topannonces.fr/annonce-location-maison-v46292096.html', 'demande de photos par mail top annonce 13/07/15<br>relance mail 15/07/15<br>jardin en pleine campagne 690€', 1, 1, 0, 1),
+(13, 'Maison T2 43m²', 43.3257, 5.46548, 'http://www.pap.fr/annonce/locations-maison-bouches-du-rhone-13-g376-jusqu-a-750-euros-r406400876', 'visité : proprio au dessus<br>jardin privatif campagne 750€', 1, 0, 0, 1),
+(14, 'Appart T3 70m²', 43.3064, 5.51408, 'http://www.seloger.com/annonces/locations/maison/marseille-12eme-13/saint-julien/94746639.htm?ci=130002,130055', '1er etage - terrasse 725€', 0, 0, 0, 0),
+(27, 'Maison T2 38m²', 43.3109, 5.41042, 'http://www.topannonces.fr/pro/annonce-location-maison-v46360850.html', 'jardin 150m² 620€<br>dans propriété privé', 0, 0, 0, 0),
+(16, 'Maison T2 45m² DOUBLON', 43.3538, 5.46265, 'http://www.paruvendu.fr/immobilier/location/maison/plan-de-cuques-13380/1202078173A1KILHMN000', 'pas de jardin 670€', 0, 0, 0, 1),
+(26, 'Maison T3 50m²', 43.2112, 5.42519, 'http://www.paruvendu.fr/immobilier/location/maison-a-louee/particulier/1201803226A1KILHMN000', 'terrasse 700€<br>dans propriété', 0, 0, 0, 0),
+(19, 'MaisonT2 28m²', 43.3545, 5.4372, 'http://www.topannonces.fr/pro/annonce-location-maison-v44492690.html', 'terrasse 620€', 0, 0, 0, 0),
+(20, 'Maison T1 37m²', 43.3224, 5.39961, 'http://www.leboncoin.fr/locations/827751423.htm', 'Mail LBC 13/07 - à relancer le 20/07<br>Nosley Sylvain mailto:sylvainnosley@gmail.com<br>jardin privé arboré de 250m² 710m€<br>', 1, 1, 0, 0),
+(21, 'Maison T2 43m²', 43.2865, 5.48183, 'http://www.avendrealouer.fr/location/marseille-13/b-maison/2-pieces/loc-101-5415/fd-9542305.html', 'terrasse et jardin 670€', 0, 0, 0, 0),
+(24, 'Maison T1 30m²', 43.2969, 5.48301, 'http://www.mymarseille.com/location/maison/1-piece-30-m2-la-valentine-11eme-marseille-50553.html#tab-a', 'jardin terrasse 660€<br>', 1, 0, 0, 0),
+(23, 'Maison T2 60m²', 43.3501, 5.46879, 'http://www.leboncoin.fr/locations/819200978.htm', 'pas de jardin 600€', 0, 0, 0, 0),
+(25, 'Maison T1 31m²', 43.3011, 5.50392, 'http://www.mymarseille.com/location/maison/maison-de-ville-1-piece-31-m2-les-camoins-11eme-marseille-58150.html#tab-a', 'terrasse 520€   20€ charges', 0, 0, 0, 0),
+(32, 'T3 68m2 500€', 43.3034, 5.45282, 'http://', 'balcon, le prio', 1, 0, 1, 0),
+(31, 'Appart T3 56m²', 43.2957, 5.38224, 'http://gitimmo.fr/biens/l/t3-603200#.VaVNwfn1akq', 'cour 15m² 600€', 0, 0, 0, 0),
+(35, 'Meublé T1 35m²', 43.2866, 5.40096, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13005/t1-35-m2---parking-s-sol-timone---jean-martin/123776612', '590€', 0, 0, 0, 0),
+(36, 'Meublé 21m²', 43.3259, 5.40802, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13014/studio-meubl--21-m2-avec-terrasse-et-jardinet/122039534', '450€', 0, 0, 0, 0),
+(37, 'Meublé T2 33m²', 43.2907, 5.39463, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13005/t2-meubl--tres-calme-de-33m2/121566572', '550€', 0, 0, 0, 0),
+(38, 'Meublé T1 40m²', 43.3591, 5.43956, 'http://www.leboncoin.fr/locations/847451740.htm?ca=21_s', '650€', 0, 0, 0, 0),
+(39, 'Meublé 33m²', 43.3499, 5.43673, 'http://www.leboncoin.fr/locations/846588905.htm', '560€', 0, 0, 0, 0),
+(40, 'Meublé T1 38m2', 43.3414, 5.43806, 'http://www.leboncoin.fr/locations/842645125.htm?ca=21_s', '518€', 0, 0, 0, 0),
+(41, 'Meublé 26m²', 43.3426, 5.43115, 'http://www.leboncoin.fr/locations/842281503.htm?ca=21_s', '490€', 0, 0, 0, 0),
+(42, 'Meublé T2 35m²', 43.334, 5.4295, 'http://www.leboncoin.fr/locations/816352294.htm?ca=21_s', '553€', 0, 0, 0, 0),
+(43, 'Meublé 13ième 29m2 500€', 43.2741, 5.47257, 'http://www.leboncoin.fr/locations/848265747.htm?ca=21_s', 'Dans jardin habitant<br>localisation ??<br><br><br>', 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appart_tests`
+--
+
+CREATE TABLE IF NOT EXISTS `appart_tests` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `loclat` float NOT NULL,
+  `loclng` float NOT NULL,
+  `url` text NOT NULL,
+  `comment` text NOT NULL,
+  `interet` tinyint(4) NOT NULL,
+  `checked` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
+
+--
+-- Dumping data for table `appart_tests`
+--
+
+INSERT INTO `appart_tests` (`id`, `name`, `loclat`, `loclng`, `url`, `comment`, `interet`, `checked`) VALUES
+(35, 'Rennes', 48.1056, -1.67404, 'http://fr.wikipedia.org/wiki/Rennes', 'Un commentaire rennais<br>sur <br>plusieurs<br>lignes<br>', 0, 0),
+(36, 'Marseille', 43.2772, 5.42175, 'http://fr.wikipedia.org/wiki/Marseille', 'Un commentaire Marseillais', 0, 0),
+(37, 'Parents', 48.4018, -4.43328, 'http://www.server-green.com/fre/actualites/economie/0810142142_le_salon_limex_2008_une_preuve_du_dynamisme_de_l_industrie_en_libye', 'Un commentaire Brestois', 0, 0),
+(61, '', 51.0138, 25.8398, '', '', 0, 0),
+(62, '', 44.0876, -161.367, 'toto', '', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `article`
+--
+
+CREATE TABLE IF NOT EXISTS `article` (
+  `date` date NOT NULL,
+  `code` int(11) NOT NULL,
+  `valeur` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Dumping data for table `article`
+--
+
+INSERT INTO `article` (`date`, `code`, `valeur`) VALUES
+('2013-10-14', 1, 10),
+('2013-10-17', 1, 20),
+('2013-10-28', 1, 10),
+('2013-10-03', 1, 10),
+('2013-09-03', 1, 10),
+('2013-09-21', 1, 20),
+('2013-10-14', 2, 30),
+('2013-10-15', 2, 10),
+('2013-10-27', 2, 15),
+('2013-10-25', 2, 25),
+('2013-09-09', 2, 10),
+('2013-10-31', 2, 20),
+('2013-09-16', 2, 10),
+('2013-09-27', 2, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `config_map`
+--
+
+CREATE TABLE IF NOT EXISTS `config_map` (
+  `id` varchar(16) character set latin1 collate latin1_general_ci NOT NULL default '',
+  `lng` float NOT NULL,
+  `lat` float NOT NULL,
+  `zoom` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `config_map`
+--
+
+INSERT INTO `config_map` (`id`, `lng`, `lat`, `zoom`) VALUES
+('test', 25.4773, 51.3923, 7),
+('apparts', 5.56595, 43.4639, 10),
+('estate', 5.44921, 43.3207, 13),
+('estate2', 5.44682, 43.3188, 14),
+('meubles', 5.46604, 43.372, 13);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `estate`
+--
+
+CREATE TABLE IF NOT EXISTS `estate` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `loclat` float NOT NULL,
+  `loclng` float NOT NULL,
+  `url` text NOT NULL,
+  `comment` text NOT NULL,
+  `interet` int(11) NOT NULL,
+  `checked` tinyint(4) NOT NULL,
+  `address` tinyint(4) NOT NULL,
+  `unvalid` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
+
+--
+-- Dumping data for table `estate`
+--
+
+INSERT INTO `estate` (`id`, `name`, `loclat`, `loclng`, `url`, `comment`, `interet`, `checked`, `address`, `unvalid`) VALUES
+(32, 'T4 96 m2 - 120K', 43.3127, 5.37528, 'http://www.leboncoin.fr/ventes_immobilieres/805428822.htm', '2800E de charge dont eau   chauffage', 0, 0, 0, 0),
+(33, 'T4 70m2 -- 144K€', 43.3093, 5.40257, 'http://www.leboncoin.fr/ventes_immobilieres/751401594.htm', 'charges 1500€/an', 0, 0, 0, 0),
+(34, 'T4 67m2 -- 145K€', 43.3044, 5.44875, 'http://www.leboncoin.fr/ventes_immobilieres/798453300.htm', 'Charges : ??<br>Garage en location', 0, 0, 0, 0),
+(35, 'T4 78m2 -- 147K€', 43.2609, 5.42004, 'http://www.leboncoin.fr/ventes_immobilieres/812364683.htm', '- Sans frais d''agence,<br>- Bénéficiant de 14.700€ de PTZ<br>- Avec une cave et un stationnement compris dans le prix,', 0, 0, 0, 0),
+(36, 'T3/4 61m2 -- 148K€', 43.3141, 5.39713, 'http://www.leboncoin.fr/ventes_immobilieres/830177059.htm', 'Charges ~1500', 0, 0, 0, 0),
+(52, 'T2 - 51m2 - 95000€', 43.3262, 5.43625, 'http://www.leboncoin.fr/ventes_immobilieres/825089065.htm', 'Balcon fermé 8m2<br>charges 921', 1, 0, 1, 0),
+(38, 'T3/4 65m2 -- 88K€', 43.2739, 5.42214, 'http://www.leboncoin.fr/ventes_immobilieres/830104547.htm', '- charge ??', 0, 0, 0, 0),
+(39, 'T3 45m2 -- 145K€ ', 43.3016, 5.41724, 'http://www.leboncoin.fr/ventes_immobilieres/830070808.htm', '- parking collectig<br>- charges ??', 0, 0, 0, 0),
+(40, 'Vieux moulin -- 85K€', 43.3404, 5.39075, 'http://www.leboncoin.fr/ventes_immobilieres/763526744.htm', 'T5 63m2 rénové vue mer -- résidence Le vieux moulin <br>Charges : 1220<br>tx foncière : 710', 1, 1, 1, 0),
+(41, 'T4 64m2 -- 84K€', 43.3132, 5.37283, 'http://www.leboncoin.fr/ventes_immobilieres/830139840.htm', 'frais d''agence inclus ou pas ??<br>Charges ? <br>tx fncr ?<br>', 0, 0, 0, 0),
+(43, 'T3/4m2 65m2 -- 115K€', 43.3219, 5.38454, 'http://www.leboncoin.fr/ventes_immobilieres/822321520', 'Vue mer<br>Grand garage<br>charge : 1200<br>Tx Fncr : 550', 0, 0, 0, 0),
+(50, 'T3/4 - 65m2 - 125000€', 43.3199, 5.40493, 'http://www.leboncoin.fr/ventes_immobilieres/833178312.htm', 'garage, cave', 0, 0, 0, 0),
+(51, 'T3/4 - 68m2 - 135000€', 43.3224, 5.43291, 'http://www.leboncoin.fr/ventes_immobilieres/833265921.htm', 'Etat neuf, garage<br>Charges : 1200<br>Tx Fncr : 900', 0, 0, 0, 0),
+(45, 'maison T3/4 70m2 -- 149K€', 43.2905, 5.56838, 'http://www.leboncoin.fr/ventes_immobilieres/829966582.htm', 'terrasse<br>pas de charge<br>parking ?', 0, 0, 0, 0),
+(46, 'T3 45m2 -- 59K€', 43.3122, 5.38573, 'http://www.mymarseille.com/vente/appartement/duplex-3-pieces-75-m2-belle-de-mai-3eme-marseille-57179.html', 'Surface sol 75m2<br>Charges 930<br>Tx Fncr 170', 1, 0, 0, 0),
+(49, 'T3 - 64m² - 109500€', 43.322, 5.44225, 'http://www.leboncoin.fr/ventes_immobilieres/837516768.htm?ca=21_s', 'charges 1600', 0, 0, 0, 0),
+(48, 'T3 62m² - 149K€ ', 43.3209, 5.40111, 'http://www.seloger.com/annonces/achat/maison/marseille-13eme-13/saint-just/97357857.htm', 'Trichet Thierry 0647202485<br>visité<br>', 1, 1, 1, 0),
+(53, 'maison T3 - 50m2 - 130000€', 43.292, 5.4654, 'http://www.leboncoin.fr/ventes_immobilieres/825089065.htm', '', 1, 0, 0, 0),
+(54, 'T3 63m2 -- 89K€', 43.3239, 5.4339, 'http://www.leboncoin.fr/ventes_immobilieres/754892299.htm', 'Balcon (vue dégagée??), parking provatif, cave<br>Charges : 2600 !! (565 lots !)<br>Tx fncr : ???<br>', 0, 0, 0, 0),
+(55, 'T3 63m2 -- 95K€', 43.3362, 5.44081, 'http://www.leboncoin.fr/ventes_immobilieres/832994904.htm', 'parking privatif, cave, balcon, clim, chauffage sol, porte blindée.<br>Charges : ???<br>Tx fncr : ???<br>', 0, 0, 0, 0),
+(56, 'T3 70m2 120K€', 43.3207, 5.44921, 'http://www.leboncoin.fr/ventes_immobilieres/840159556.htm', '', 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `estate2`
+--
+
+CREATE TABLE IF NOT EXISTS `estate2` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `loclat` float NOT NULL,
+  `loclng` float NOT NULL,
+  `type` varchar(5) NOT NULL,
+  `surface` decimal(5,2) NOT NULL,
+  `price` int(11) NOT NULL,
+  `url` text NOT NULL,
+  `comment` text NOT NULL,
+  `interet` int(11) NOT NULL,
+  `checked` tinyint(4) NOT NULL,
+  `address` tinyint(4) NOT NULL,
+  `unvalid` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+
+--
+-- Dumping data for table `estate2`
+--
+
+INSERT INTO `estate2` (`id`, `name`, `loclat`, `loclng`, `type`, `surface`, `price`, `url`, `comment`, `interet`, `checked`, `address`, `unvalid`) VALUES
+(32, 'T4 96 m2', 43.3127, 5.37528, '4', 96.00, 120000, 'http://www.leboncoin.fr/ventes_immobilieres/805428822.htm', '2800E de charge dont eau   chauffage', 0, 0, 0, 0),
+(33, 'T4 70m2 -- 144K€', 43.3093, 5.40257, '4', 70.00, 144000, 'http://www.leboncoin.fr/ventes_immobilieres/751401594.htm', 'charges 1500€/an', 0, 0, 0, 0),
+(34, 'T4 67m2 -- 145K€', 43.3044, 5.44875, '4', 67.00, 145000, 'http://www.leboncoin.fr/ventes_immobilieres/798453300.htm', 'Charges : ??<br>Garage en location', 0, 0, 0, 0),
+(35, 'T4 78m2 -- 147K€', 43.2609, 5.42004, '4', 78.00, 147000, 'http://www.leboncoin.fr/ventes_immobilieres/812364683.htm', '- Sans frais d''agence,<br>- Bénéficiant de 14.700€ de PTZ<br>- Avec une cave et un stationnement compris dans le prix,', 0, 0, 0, 0),
+(36, 'T3/4 61m2 -- 148K€', 43.3141, 5.39713, '3/4', 61.00, 148000, 'http://www.leboncoin.fr/ventes_immobilieres/830177059.htm', 'Charges ~1500', 0, 0, 0, 0),
+(37, 'T4 76m2 -- 113K€', 43.3227, 5.44178, '4', 76.00, 113000, 'http://www.leboncoin.fr/ventes_immobilieres/811067116.htm', 'Balcon<br>Garage<br>Charges ??', 1, 0, 0, 0),
+(38, 'T3/4 65m2 -- 88K€', 43.2739, 5.42214, '3/4', 65.00, 88000, 'http://www.leboncoin.fr/ventes_immobilieres/830104547.htm', '- charge ??', 0, 0, 0, 0),
+(39, 'T3 45m2 -- 145K€ ', 43.3016, 5.41724, '3', 45.00, 145000, 'http://www.leboncoin.fr/ventes_immobilieres/830070808.htm', '- parking collectig<br>- charges ??', 0, 0, 0, 0),
+(40, 'T5 63m2 rénové vue mer -- 85K€', 43.3404, 5.39075, '5', 63.00, 85000, 'http://www.leboncoin.fr/ventes_immobilieres/763526744.htm', 'Charges : 1220<br>tx foncière : 710', 0, 0, 0, 0),
+(41, 'T4 64m2 -- 84K€', 43.3132, 5.37283, '4', 64.00, 84000, 'http://www.leboncoin.fr/ventes_immobilieres/830139840.htm', 'frais d''agence inclus ou pas ??<br>Charges ? <br>tx fncr ?<br>', 0, 0, 0, 0),
+(42, 'Loft 50m2   jardin -- 140K€', 43.2781, 5.41441, 'Loft', 50.00, 140000, 'http://www.leboncoin.fr/ventes_immobilieres/830020505.htm', 'Cuisine ???<br>Charges 480€<br>Tx Fncr 450€<br>', 1, 0, 0, 0),
+(43, 'T3/4m2 65m2 -- 115K€', 43.3219, 5.38454, '3/4', 65.00, 115000, 'http://www.leboncoin.fr/ventes_immobilieres/822321520', 'Vue mer<br>Grand garage<br>charge : 1200<br>Tx Fncr : 550', 0, 0, 0, 0),
+(44, 'T4 refait 82m2 --120K€', 43.3437, 5.38776, '4', 82.00, 120000, 'http://www.leboncoin.fr/ventes_immobilieres/810867632.htm', 'Charges annuelles : 2304 € (Chauffage et eau inclus).<br>', 0, 0, 0, 0),
+(45, 'maison T3/4 70m2 -- 149K€', 43.2905, 5.56838, '3/4', 70.00, 149000, 'http://www.leboncoin.fr/ventes_immobilieres/829966582.htm', 'terrasse<br>pas de charge<br>parking ?', 0, 0, 0, 0),
+(46, 'T3 45m2 -- 59K€', 43.3122, 5.38573, '3', 45.00, 59000, 'http://www.mymarseille.com/vente/appartement/duplex-3-pieces-75-m2-belle-de-mai-3eme-marseille-57179.html', 'Surface sol 75m2<br>Charges 930<br>Tx Fncr 170', 1, 0, 0, 0),
+(47, 'T4 65m2 -- 100K€', 43.2884, 5.45924, '4', 65.00, 100000, 'http://www.mymarseille.com/vente/appartement/4-pieces-65-m2-saint-marcel-11eme-marseille-51730.htm', 'Charges 1320', 0, 0, 1, 0),
+(48, 'T3 62m² - 149K€ ', 43.3209, 5.40111, '3', 62.00, 149000, 'http://www.seloger.com/annonces/achat/maison/marseille-13eme-13/saint-just/97357857.htm', 'Trichet Thierry 0647202485<br>visité<br>', 1, 1, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mapstyles`
+--
+
+CREATE TABLE IF NOT EXISTS `mapstyles` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `url` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `mapstyles`
+--
+
+INSERT INTO `mapstyles` (`id`, `name`, `url`) VALUES
+(1, 'default', 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+(2, 'transports', 'http://{s}.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png'),
+(3, 'openCycleMap', 'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png'),
+(4, 'Hike & Bike', 'http://toolserver.org/tiles/hikebike/{z}/{x}/{y}.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `meubles`
+--
+
+CREATE TABLE IF NOT EXISTS `meubles` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `loclat` float NOT NULL,
+  `loclng` float NOT NULL,
+  `url` text NOT NULL,
+  `comment` text NOT NULL,
+  `interet` int(11) NOT NULL,
+  `checked` tinyint(4) NOT NULL,
+  `address` tinyint(4) NOT NULL,
+  `unvalid` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
+
+--
+-- Dumping data for table `meubles`
+--
+
+INSERT INTO `meubles` (`id`, `name`, `loclat`, `loclng`, `url`, `comment`, `interet`, `checked`, `address`, `unvalid`) VALUES
+(34, 'Meublé Studio 25m²', 43.3113, 5.40939, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13012/location-temporaire-/123778728', '450€', 0, 0, 0, 0),
+(33, 'Meublé T2 35m²', 43.3333, 5.43205, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble chateau-gombert-13013/meubl--t2--m2-m-tro-la-rose/123600935', '560€', 0, 0, 0, 0),
+(35, 'Meublé T1 35m²', 43.2866, 5.40096, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13005/t1-35-m2---parking-s-sol-timone---jean-martin/123776612', '590€', 0, 0, 0, 0),
+(36, 'Meublé 21m²', 43.3259, 5.40802, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13014/studio-meubl--21-m2-avec-terrasse-et-jardinet/122039534', '450€', 0, 0, 0, 0),
+(37, 'Meublé T2 33m²', 43.2907, 5.39463, 'http://location-appartement-meuble.vivastreet.com/annonces-location-appartement-meuble marseille-13005/t2-meubl--tres-calme-de-33m2/121566572', '550€', 0, 0, 0, 0),
+(38, 'Meublé T1 40m²', 43.3591, 5.43956, 'http://www.leboncoin.fr/locations/847451740.htm?ca=21_s', '650€<br><br>12 AV REINE JEANNE<br>MAURIN<br>11H', 1, 1, 0, 0),
+(39, 'Meublé 33m²', 43.3499, 5.43673, 'http://www.leboncoin.fr/locations/846588905.htm', '560€', 0, 0, 0, 0),
+(40, 'Meublé T1 38m2', 43.3414, 5.43806, 'http://www.leboncoin.fr/locations/842645125.htm?ca=21_s', '518€<br><br>loué', 0, 0, 0, 1),
+(41, 'Meublé 26m²', 43.3426, 5.43115, 'http://www.leboncoin.fr/locations/842281503.htm?ca=21_s', '490€', 0, 0, 0, 1),
+(42, 'Meublé T2 35m²', 43.334, 5.4295, 'http://www.leboncoin.fr/locations/816352294.htm?ca=21_s', '553€', 0, 0, 0, 0),
+(43, 'Meublé 13ième 29m2 500€', 43.2741, 5.47257, 'http://www.leboncoin.fr/locations/848265747.htm?ca=21_s', 'Dans jardin habitant<br>localisation ??<br><br><br>', 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `old_appart`
+--
+
+CREATE TABLE IF NOT EXISTS `old_appart` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(48) NOT NULL,
+  `loclat` float NOT NULL,
+  `loclng` float NOT NULL,
+  `url` text NOT NULL,
+  `comment` text NOT NULL,
+  `interet` int(11) NOT NULL,
+  `checked` tinyint(4) NOT NULL,
+  `address` tinyint(4) NOT NULL,
+  `unvalid` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=111 ;
+
+--
+-- Dumping data for table `old_appart`
+--
+
+INSERT INTO `old_appart` (`id`, `name`, `loclat`, `loclng`, `url`, `comment`, `interet`, `checked`, `address`, `unvalid`) VALUES
+(40, 'La pounche - T3 74m² - 795€', 43.3335, 5.45703, 'http://www.seloger.com/annonces/locations/appartement/marseille-13eme-13/79177187.htm?utm_campaign=mitula_region_non_prio', 'libre au 03/09', 0, 0, 0, 1),
+(39, 'place castellane - T3 60m² - 630€', 43.2858, 5.38433, 'http://www.seloger.com/annonces/locations/appartement/marseille-6eme-13/castellane/80137451.htm?ci=130055', 'Départ 7h52 place castellane, M1 -> La fourragère, 7T -> provence (8h26)', 0, 0, 0, 0),
+(57, 'Toit de la Pounche - T3 65m² - 750€', 43.3335, 5.4634, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/79938461.htm?ci=130002', 'libre au 27/08', 1, 0, 0, 1),
+(58, 'Centre -T2 36m² - 555€', 43.3399, 5.47823, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/centre-pie-d-autry/79889471.htm?ci=130002', '', 0, 0, 0, 0),
+(59, 'La pounche/Les aubagniens - T3 70m² - 780€', 43.332, 5.46741, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/la-pounche-les-aubagnens/75236307.htm?ci=130002', 'Attente rappel', 0, 1, 0, 0),
+(60, 'T2 42m² - 700€', 43.3337, 5.48593, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/78208365.htm?ci=130002', 'Proximité     (550m)<br>Contact : réponse mail le 17/07 (savoir s''il est pris)', 1, 1, 1, 0),
+(61, 'Centre - T2 50m² - 620€', 43.3389, 5.47806, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/centre-pie-d-autry/76427691.htm?ci=130002', 'loué', 0, 0, 0, 1),
+(62, 'studio 18m² - 250€', 43.3403, 5.48106, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/centre-pie-d-autry/77675503.htm?ci=130002', '', 0, 0, 0, 0),
+(63, 'T2 45m² - 750€', 43.3341, 5.46248, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/la-pounche-les-aubagnens/76900481.htm?ci=130002', '', 1, 0, 0, 0),
+(88, 't2 52m2 - 680€', 43.3349, 5.45958, 'http://www.logic-immo.com/detail-location-e86a3297-3a09-44d8-6118-07efbd42aae5.htm', 'loué', 0, 0, 0, 1),
+(65, 'T2 40m² - 650€', 43.3352, 5.48282, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/74934817.htm?ci=130002', 'Pas de photos<br>Aucune cuisine ?', 1, 0, 1, 0),
+(66, 'T2 48m² - 695€', 43.3388, 5.47497, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/72754939.htm?ci=130002', 'propre !<br>agence fermée', 0, 0, 0, 1),
+(83, 'Studio 22m2 - 364€', 43.2862, 5.40611, 'http://www.leboncoin.fr/locations/501049036.htm?ca=21_s', '', 0, 0, 0, 0),
+(84, 'Studio 22m2 - 395€', 43.2866, 5.38648, 'http://www.leboncoin.fr/locations/500969229.htm?ca=21_s', '', 0, 0, 0, 0),
+(85, 'Studio 35m2 - 379€', 43.3129, 5.38223, 'http://www.leboncoin.fr/locations/496583563.htm?ca=21_s', '', 0, 0, 0, 0),
+(86, 'Timone Baudelaire - 23m2 - 350€', 43.2942, 5.40812, 'http://www.leboncoin.fr/locations/494486888.htm?ca=21_s', '', 0, 0, 0, 0),
+(87, 'T2 34m2   grande terrasse - 773€', 43.356, 5.4866, 'http://www.agifim-location.com/location-Appartement T2 ALLAUCH LOGIS NEUF DANS RESIDENCE FERMEE RECENTE - 1ER ETAGE - 2 TERRASSES - PARKING PRIVE-4930.html', 'Libre au 03/10/2013   trop loin (logis neuf)<br><br>', 0, 0, 0, 1),
+(93, 'T2 43m2 - 690€', 43.3513, 5.48563, 'http://www.leboncoin.fr/locations/505501945.htm?ca=21_s', 'jardin 25m2 abri terrasse<br>Contact : mail en attente<br>Contact : trop loin (Gonagues)', 1, 1, 0, 1),
+(98, 'Maison T3 90m2 - 800€', 43.3355, 5.4819, 'http://www.jacquemot-lombardo-immobilier.com/fiches/3-32-36_1886098/allauch-village.html?manufacturers_id=', '2 étages, pas super jolie, mais proche', 0, 1, 1, 0),
+(99, 'T3 duplex 54m2 - 780€', 43.3332, 5.46235, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/80216383.htm?ci=130002', '', 0, 0, 0, 0),
+(100, 'T4 85m2 - 800€', 43.3215, 5.47471, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/78883807.htm?ci=130002', 'pas de photo, localisation ???', 1, 0, 0, 0),
+(101, 'studio 25m2 - 420€', 43.3416, 5.47566, 'http://www.seloger.com/annonces/locations/appartement/allauch-13/78935473.htm?ci=130002', 'pas de photo, annonce récente', 0, 0, 0, 0),
+(102, 'studio 31m2 - 405€', 43.3407, 5.47857, 'http://www.seloger.com/annonces/rubrique-visuels/76097503.htm?ci=130002', '€/m2 intéressant', 0, 0, 0, 0),
+(103, 'T2 35m2 - 660€', 43.3395, 5.48104, 'http://www.visualysimmo.com/location,appartement-appart-de-type-2-de-35m²-sur-allauch-allauch,003771143', 'terrasse 20m2<br>Zone géo OK, addr exacte à confirmer', 1, 0, 1, 0),
+(104, 'T1 38m2 - 630€', 43.2961, 5.48355, 'http://www.leboncoin.fr/locations/503905628.htm?ca=21_s', 'pas de frais agence - eau elec chauff wifi compris <br>terrasse exterieure - meublé<br>mi sept à juin 2014', 0, 0, 0, 0),
+(107, 'T 1 pieces 35m2 - 550€ ch comp', 43.3364, 5.48196, 'http://location-appartement.vivastreet.com/annonces-location-appartement allauch-13190/maison-villa-3-pieces-35-m2-allauch/69992684', ' les plus :  cuisine équipée - mini TERRASSE  - centre village<br>les moins : date de l''annonce pas de fenêtres<br>', 0, 0, 1, 0),
+(105, 'T2 46m2 - 790€', 43.3312, 5.46063, 'http://www.leboncoin.fr/locations/513141675.htm?ca=21_s', '', 0, 0, 0, 0),
+(106, 'maison T2 55m2 - 710€', 43.3579, 5.47823, 'http://www.leboncoin.fr/locations/513582034.htm?ca=21_s', 'conditions', 0, 0, 0, 0),
+(108, 'T2 40m2- 650€', 43.3347, 5.48289, 'http://location-appartement.vivastreet.com/annonces-location-appartement allauch-13190/appartement-2-pieces-40-m2-allauch/74345352', 'les moins : immeuble', 0, 0, 0, 0),
+(109, 'T2 45m2 - 600€ - chez l''habitant', 43.3291, 5.47874, 'http://fr.chambrealouer.com/search/detail.php?code=36072', '', 0, 0, 1, 0),
+(110, 'appart test', 43.3379, 5.45355, '', 'fgfdgdg', 1, 0, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userkind`
+--
+
+CREATE TABLE IF NOT EXISTS `userkind` (
+  `id` int(11) NOT NULL auto_increment,
+  `kindlabel` varchar(255) character set latin1 collate latin1_general_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `userkind`
+--
+
+INSERT INTO `userkind` (`id`, `kindlabel`) VALUES
+(0, 'undefined'),
+(1, 'consommateur'),
+(3, 'Télétubbie'),
+(5, 'grosse bouffe');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL auto_increment,
+  `lastname` varchar(255) character set latin1 collate latin1_general_ci NOT NULL,
+  `firstname` varchar(255) character set latin1 collate latin1_general_ci NOT NULL,
+  `locLat` float NOT NULL,
+  `locLng` float NOT NULL,
+  `kind` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `lastname`, `firstname`, `locLat`, `locLng`, `kind`) VALUES
+(1, 'Cahier', 'Johann', 48.1106, -1.61005, 1),
+(2, 'Hery', 'Guillaume', 48.039, -1.72987, 3),
+(3, 'toto', 'pupup', 48.0981, -1.65035, 1),
+(4, 'Renault', 'Aurore', 48.1103, -1.60986, 1),
+(5, 'tatu', 'toto', 48.068, -1.70013, 0),
+(6, 'titi', 'toto', 48.2036, -1.65756, 5),
+(7, 'mobile', 'user', 48.0976, -1.65842, 5),
+(8, 'choco', 'bn', 48.7334, -1.26849, 5);
